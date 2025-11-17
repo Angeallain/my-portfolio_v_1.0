@@ -80,32 +80,37 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-12 flex items-center gap-12">
-            <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#7209B7] to-[#E2BD6B] flex items-center justify-center text-6xl font-bold text-white shadow-xl">
-              LM
-            </div>
-            <div className="flex-1">
-              <h2 className="text-5xl font-bold text-[#4D067B] mb-2">Lazib Malak</h2>
-              <p className="text-2xl text-[#E2BD6B] font-semibold mb-4">Software Engineering Student</p>
-              <p className="text-gray-600 text-lg mb-6">
-                Passionate about building innovative solutions and learning new technologies. 
-                Currently pursuing my degree in Software Engineering with a focus on full-stack development & AI learnig.
-              </p>
-              <div className="flex gap-4">
-                <a href="https://github.com/Angeallain" target="_blank" rel="noopener noreferrer" 
-                   className="bg-[#4D067B] text-white px-6 py-3 rounded-full hover:bg-[#7209B7] transition flex items-center gap-2 shadow-lg">
-                  <Github size={20} /> GitHub
-                </a>
-                <a href="https://linkedin.com/in/lazib-malak" target="_blank" rel="noopener noreferrer"
-                   className="bg-[#E2BD6B] text-[#4D067B] px-6 py-3 rounded-full hover:bg-[#F8E2D4] transition flex items-center gap-2 shadow-lg">
-                  <Linkedin size={20} /> LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-6xl mx-auto">
+    <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      
+      {/* Avatar */}
+      <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-[#7209B7] to-[#E2BD6B] flex items-center justify-center text-5xl md:text-6xl font-bold text-white shadow-xl mb-6 md:mb-0">
+        LM
+      </div>
+      
+      {/* Text Content */}
+      <div className="flex-1 text-center md:text-left">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#4D067B] mb-2">Lazib Malak</h2>
+        <p className="text-xl md:text-2xl text-[#E2BD6B] font-semibold mb-4">Software Engineering Student</p>
+        <p className="text-gray-600 text-base md:text-lg mb-6">
+          Passionate about building innovative solutions and learning new technologies. 
+          Currently pursuing my degree in Software Engineering with a focus on full-stack development & AI learning.
+        </p>
+        <div className="flex justify-center md:justify-start gap-4 flex-wrap">
+          <a href="https://github.com/Angeallain" target="_blank" rel="noopener noreferrer" 
+             className="bg-[#4D067B] text-white px-6 py-3 rounded-full hover:bg-[#7209B7] transition flex items-center gap-2 shadow-lg">
+            <Github size={20} /> GitHub
+          </a>
+          <a href="https://linkedin.com/in/lazib-malak" target="_blank" rel="noopener noreferrer"
+             className="bg-[#E2BD6B] text-[#4D067B] px-6 py-3 rounded-full hover:bg-[#F8E2D4] transition flex items-center gap-2 shadow-lg">
+            <Linkedin size={20} /> LinkedIn
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section id="about" className="py-20 px-6">
