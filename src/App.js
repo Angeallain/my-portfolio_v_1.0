@@ -66,17 +66,42 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-[#4D067B] via-[#7209B7] to-[#B984DB]">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-[#4D067B]/90 backdrop-blur-sm z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-[#E2BD6B]">Portfolio</h1>
-          <div className="flex gap-6">
-            <a href="#about" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">About</a>
-            <a href="#education" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Education</a>
-            <a href="#projects" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Projects</a>
-            <a href="#experience" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Experience</a>
-            <a href="#contact" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Contact</a>
-          </div>
-        </div>
-      </nav>
+  <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 className="text-2xl font-bold text-[#E2BD6B]">Portfolio</h1>
+    
+    {/* Desktop Links */}
+    <div className="hidden md:flex gap-6">
+      <a href="#about" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">About</a>
+      <a href="#education" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Education</a>
+      <a href="#projects" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Projects</a>
+      <a href="#experience" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Experience</a>
+      <a href="#contact" className="text-[#F8E2D4] hover:text-[#E2BD6B] transition">Contact</a>
+    </div>
+
+    {/* Mobile Hamburger */}
+    <div className="md:hidden">
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="text-[#F8E2D4] focus:outline-none"
+      >
+        {/* Hamburger icon */}
+        {isMenuOpen ? '✕' : '☰'}
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  {isMenuOpen && (
+    <div className="md:hidden bg-[#4D067B]/90 px-6 py-4 space-y-4">
+      <a href="#about" onClick={() => setIsMenuOpen(false)} className="block text-[#F8E2D4] hover:text-[#E2BD6B] transition">About</a>
+      <a href="#education" onClick={() => setIsMenuOpen(false)} className="block text-[#F8E2D4] hover:text-[#E2BD6B] transition">Education</a>
+      <a href="#projects" onClick={() => setIsMenuOpen(false)} className="block text-[#F8E2D4] hover:text-[#E2BD6B] transition">Projects</a>
+      <a href="#experience" onClick={() => setIsMenuOpen(false)} className="block text-[#F8E2D4] hover:text-[#E2BD6B] transition">Experience</a>
+      <a href="#contact" onClick={() => setIsMenuOpen(false)} className="block text-[#F8E2D4] hover:text-[#E2BD6B] transition">Contact</a>
+    </div>
+  )}
+</nav>
+
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
